@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="SweetId">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="C[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SweetName">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="40"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ProducerName">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="60"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SweetType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Caramel"/>
+            <xs:enumeration value="Toffee"/>
+            <xs:enumeration value="ChocolateFilled"/>
+            <xs:enumeration value="ChocolatePlain"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ChocolateKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Dark"/>
+            <xs:enumeration value="Milk"/>
+            <xs:enumeration value="White"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Kilocalories">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="900"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Milliliters">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Milligrams">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Grams">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+            <xs:fractionDigits value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="EnergyAmount">
+        <xs:simpleContent>
+            <xs:extension base="Kilocalories">
+                <xs:attribute name="unit" type="xs:string"
+                              use="required" fixed="kcal"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="VolumeAmount">
+        <xs:simpleContent>
+            <xs:extension base="Milliliters">
+                <xs:attribute name="unit" type="xs:string"
+                              use="required" fixed="ml"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="MilligramAmount">
+        <xs:simpleContent>
+            <xs:extension base="Milligrams">
+                <xs:attribute name="unit" type="xs:string"
+                              use="required" fixed="mg"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="GramAmount">
+        <xs:simpleContent>
+            <xs:extension base="Grams">
+                <xs:attribute name="unit" type="xs:string"
+                              use="required" fixed="g"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="IngredientsType">
+        <xs:sequence>
+            <xs:element name="Water" type="VolumeAmount"/>
+            <xs:element name="Sugar" type="MilligramAmount"/>
+            <xs:element name="Fructose" type="MilligramAmount"/>
+            <xs:element name="ChocolateType" type="ChocolateKind"
+                        minOccurs="0"/>
+            <xs:element name="Vanillin" type="MilligramAmount"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ValueType">
+        <xs:sequence>
+            <xs:element name="Proteins" type="GramAmount"/>
+            <xs:element name="Fats" type="GramAmount"/>
+            <xs:element name="Carbohydrates" type="GramAmount"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SweetEntry">
+        <xs:sequence>
+            <xs:element name="Name" type="SweetName"/>
+            <xs:element name="Energy" type="EnergyAmount"/>
+            <xs:element name="Type" type="SweetType"/>
+            <xs:element name="Ingredients" type="IngredientsType"/>
+            <xs:element name="Value" type="ValueType"/>
+            <xs:element name="Production" type="ProducerName"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="SweetId" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="Candy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Sweet" type="SweetEntry"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

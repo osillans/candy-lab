@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Candy>
+    <Sweet id="C001">
+        <Name>Sunny Caramel</Name>
+        <Energy unit="kcal">390</Energy>
+        <Type>Caramel</Type>
+        <Ingredients>
+            <Water unit="ml">8</Water>
+            <Sugar unit="mg">62000</Sugar>
+            <Fructose unit="mg">9000</Fructose>
+            <Vanillin unit="mg">12</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">0.0</Proteins>
+            <Fats unit="g">0.1</Fats>
+            <Carbohydrates unit="g">97.5</Carbohydrates>
+        </Value>
+        <Production>Kyiv Confectionery</Production>
+    </Sweet>
+    <Sweet id="C002">
+        <Name>Milk Toffee</Name>
+        <Energy unit="kcal">430</Energy>
+        <Type>Toffee</Type>
+        <Ingredients>
+            <Water unit="ml">6</Water>
+            <Sugar unit="mg">55000</Sugar>
+            <Fructose unit="mg">4000</Fructose>
+            <Vanillin unit="mg">20</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">2.5</Proteins>
+            <Fats unit="g">10.5</Fats>
+            <Carbohydrates unit="g">82.0</Carbohydrates>
+        </Value>
+        <Production>Lviv Sweets</Production>
+    </Sweet>
+    <Sweet id="C003">
+        <Name>Dark Truffle</Name>
+        <Energy unit="kcal">550</Energy>
+        <Type>ChocolateFilled</Type>
+        <Ingredients>
+            <Water unit="ml">2</Water>
+            <Sugar unit="mg">38000</Sugar>
+            <Fructose unit="mg">1500</Fructose>
+            <ChocolateType>Dark</ChocolateType>
+            <Vanillin unit="mg">35</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">5.5</Proteins>
+            <Fats unit="g">35.0</Fats>
+            <Carbohydrates unit="g">52.0</Carbohydrates>
+        </Value>
+        <Production>Lviv Sweets</Production>
+    </Sweet>
+    <Sweet id="C004">
+        <Name>Hazelnut Delight</Name>
+        <Energy unit="kcal">560</Energy>
+        <Type>ChocolateFilled</Type>
+        <Ingredients>
+            <Water unit="ml">3</Water>
+            <Sugar unit="mg">41000</Sugar>
+            <Fructose unit="mg">2000</Fructose>
+            <ChocolateType>Milk</ChocolateType>
+            <Vanillin unit="mg">30</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">7.0</Proteins>
+            <Fats unit="g">36.0</Fats>
+            <Carbohydrates unit="g">50.0</Carbohydrates>
+        </Value>
+        <Production>Odesa Chocolate</Production>
+    </Sweet>
+    <Sweet id="C005">
+        <Name>Pure Milk Chocolate</Name>
+        <Energy unit="kcal">535</Energy>
+        <Type>ChocolatePlain</Type>
+        <Ingredients>
+            <Water unit="ml">1</Water>
+            <Sugar unit="mg">52000</Sugar>
+            <Fructose unit="mg">0</Fructose>
+            <ChocolateType>Milk</ChocolateType>
+            <Vanillin unit="mg">25</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">7.5</Proteins>
+            <Fats unit="g">30.0</Fats>
+            <Carbohydrates unit="g">57.0</Carbohydrates>
+        </Value>
+        <Production>Odesa Chocolate</Production>
+    </Sweet>
+    <Sweet id="C006">
+        <Name>White Pearl</Name>
+        <Energy unit="kcal">540</Energy>
+        <Type>ChocolatePlain</Type>
+        <Ingredients>
+            <Water unit="ml">1</Water>
+            <Sugar unit="mg">56000</Sugar>
+            <Fructose unit="mg">500</Fructose>
+            <ChocolateType>White</ChocolateType>
+            <Vanillin unit="mg">28</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">6.0</Proteins>
+            <Fats unit="g">32.0</Fats>
+            <Carbohydrates unit="g">59.0</Carbohydrates>
+        </Value>
+        <Production>Kyiv Confectionery</Production>
+    </Sweet>
+    <Sweet id="C007">
+        <Name>Lemon Drop</Name>
+        <Energy unit="kcal">380</Energy>
+        <Type>Caramel</Type>
+        <Ingredients>
+            <Water unit="ml">9</Water>
+            <Sugar unit="mg">60000</Sugar>
+            <Fructose unit="mg">11000</Fructose>
+            <Vanillin unit="mg">5</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">0.0</Proteins>
+            <Fats unit="g">0.0</Fats>
+            <Carbohydrates unit="g">95.0</Carbohydrates>
+        </Value>
+        <Production>Kyiv Confectionery</Production>
+    </Sweet>
+    <Sweet id="C008">
+        <Name>Cream Toffee</Name>
+        <Energy unit="kcal">450</Energy>
+        <Type>Toffee</Type>
+        <Ingredients>
+            <Water unit="ml">5</Water>
+            <Sugar unit="mg">50000</Sugar>
+            <Fructose unit="mg">6000</Fructose>
+            <Vanillin unit="mg">18</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins unit="g">3.0</Proteins>
+            <Fats unit="g">12.0</Fats>
+            <Carbohydrates unit="g">80.0</Carbohydrates>
+        </Value>
+        <Production>Lviv Sweets</Production>
+    </Sweet>
+</Candy>
